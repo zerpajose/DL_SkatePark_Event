@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{> head }}
+</head>
+<body>
+  {{#if login}}
+  {{> Menu login=true }}
+  {{else}}
+  {{> Menu login=false }}
+  {{/if}}
+  
+  {{> Titulo }}
+  
+  {{#if admin}}
+  {{> DashboardAdmin }}
+  {{else}}
+  {{> Dashboard }}
+  {{/if}}
+  
+
+<style>
+    * {
+    margin: 0;
+    }
+    .contain {
+    background: #ece9e9;
+    height: 100vh;
+}
+</style>
+{{> Foot }}
+
+{{#if admin}}
+{{> FootGetData getdata=true }}
+{{else}}
+{{> FootGetData getdata=false }}
+{{/if}}
+
+</body>
+</html>

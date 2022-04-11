@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{> head }}
+</head>
+<body>
+  {{#if login}}
+  {{> Menu login=true }}
+  {{else}}
+  {{> Menu login=false }}
+  {{/if}}
+
+  
+  {{> Titulo }}
+  
+  {{#if edit}}
+  {{> FormUpdate }}
+  {{else}}
+  {{> FormRegistro }}
+  {{/if}}
+  {{> Alert msg=msg }}
+
+<style>
+    * {
+    margin: 0;
+    }
+    .contain {
+    background: #ece9e9;
+    height: 100vh;
+}
+</style>
+{{> Foot }}
+</body>
+</html>

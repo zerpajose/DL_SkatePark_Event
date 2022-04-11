@@ -1,4 +1,4 @@
-CREATE DATABASE skatepark
+CREATE DATABASE skatepark;
 
 CREATE TABLE skaters(
 	id SERIAL,
